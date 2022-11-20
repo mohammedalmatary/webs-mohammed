@@ -1,0 +1,120 @@
+.menu {
+	width: 720px;
+	height: 40px;
+	float: right;
+	margin-top: 4px;
+}
+
+.jqueryslidemenu{
+width: 100%;
+}
+
+.jqueryslidemenu ul{
+margin: 0px 0px 0px 10px;
+padding: 0px 0px 0px 0px;
+list-style-type: none;
+float: right;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+z-index:100;
+font-size:13px;
+text-transform: uppercase;
+margin: 0px 1px;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+display: block;
+padding: 9px 15px 9px 15px;
+text-decoration: none;
+}
+
+
+.jqueryslidemenu ul li a.active:link, .jqueryslidemenu ul li a.active:visited {
+	padding: 9px 15px 9px 15px;
+	background: url(../images/skin01/menu_hover.jpg) repeat-x left -3px;
+	color: #fff;
+}
+
+.jqueryslidemenu ul li.home a{
+padding-left:0px;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+	background: url(../images/skin01/menu_bg.jpg) repeat-x left top;
+	color: #000;
+}
+
+.jqueryslidemenu ul li a:hover{
+	background: url(../images/skin01/menu_hover.jpg) repeat-x left -3px;
+	color: #fff;
+
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: -12px !important;
+top:35px !important;
+display: block;
+visibility: hidden;
+padding:0px !important;
+padding-top:6px !important;
+}
+
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float:none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+left: 180px !important;
+top: -1px !important;
+padding-top:0px !important;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+width: 166px; /*width of sub menus*/
+padding: 5px 12px;
+margin: 0;
+border: 2px solid #000;
+border-top-width:0px;
+background: url(../images/skin01/menu_drop_hover.jpg) repeat-x left top;
+	color: #fff;
+}
+
+
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+	background: url(../images/skin01/menu_drop_hover.jpg) repeat-x left top;
+	color: #fff;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 14px;
+right: 16px;
+display: none;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 10px;
+right: 5px;
+display: none;
+}
